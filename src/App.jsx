@@ -23,8 +23,15 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      contacts:[]
+      contacts:[],
+      search: ''
     }
+  }
+
+  updateSearch(event){
+    this.setState({
+      search: event.target.value.substr(0,20)
+    });
   }
 
   componentDidMount() {
@@ -37,7 +44,6 @@ class App extends React.Component {
         });
 }
 
-
   handleClickName(event){
     event.preventDefault();
 
@@ -47,8 +53,6 @@ class App extends React.Component {
        contacts : newListClient
     })
   }
-
-  
 
   handleClickCountry(event){
     event.preventDefault();
@@ -79,7 +83,15 @@ class App extends React.Component {
       contacts : newListClient
     })
   }
+
    render() {
+
+    let filteredContacts = this.state.contacts.filter(
+      (contact) => {
+        return contact.name.toLowerCase().indexOf(
+          this.state.search.toLowerCase()) !== -1;
+      }
+    );
     return (
       <React.Fragment>
         <Topbar>
@@ -91,7 +103,12 @@ class App extends React.Component {
         <Container>
           <Filters>
               <div className="filters__search">
-                <input type="text" className="filters__search__input" placeholder="Pesquisar" />
+                <input type="text" 
+                className="filters__search__input" 
+                placeholder="Pesquisar" 
+                value = {this.state.search}
+                onChange={this.updateSearch.bind(this)}
+                />
 
                 <button className="filters__search__icon">
                   <i className="fa fa-search"/>
@@ -132,9 +149,7 @@ class App extends React.Component {
               <Name name="Empresa"/>
               <Name name="Departamento"/>
             </Contact>
-
-            
-              {this.state.contacts.map(contact => {
+              {filteredContacts.map(contact => {
                 return(
                   <Contact key = {contact.id}>
                     <ImageAvatar 
@@ -149,7 +164,8 @@ class App extends React.Component {
                     <Name name={contact.department}/>
                   </Contact>
                 ) 
-              })}
+              }
+            )}
               
           </Contacts>  
         </Container>

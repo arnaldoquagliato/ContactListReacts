@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="4" failures="4" time="7.351">
-  <testsuite name="Contacts APP" errors="0" failures="4" skipped="0" timestamp="2020-06-10T15:25:55" time="5.936" tests="4">
-    <testcase classname="Contacts APP Should render Contact component" name="Contacts APP Should render Contact component" time="0.06">
+<testsuites name="jest tests" tests="4" failures="4" time="3.083">
+  <testsuite name="Contacts APP" errors="0" failures="4" skipped="0" timestamp="2020-06-15T20:52:08" time="1.758" tests="4">
+    <testcase classname="Contacts APP Should render Contact component" name="Contacts APP Should render Contact component" time="0.043">
       <failure>Error: Unable to find an element by: [data-testid=&quot;contact&quot;]
 
 &lt;body&gt;
@@ -22,7 +22,7 @@
     at /home/arnaldoquagliato/codenation/react-13/node_modules/jest-jasmine2/build/queueRunner.js:73:41
     at processTicksAndRejections (internal/process/task_queues.js:97:5)</failure>
     </testcase>
-    <testcase classname="Contacts APP Should render Contacts component" name="Contacts APP Should render Contacts component" time="0.014">
+    <testcase classname="Contacts APP Should render Contacts component" name="Contacts APP Should render Contacts component" time="0.009">
       <failure>Error: Unable to find an element by: [data-testid=&quot;contacts&quot;]
 
 &lt;body&gt;
@@ -42,7 +42,7 @@
     at mapper (/home/arnaldoquagliato/codenation/react-13/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
     at /home/arnaldoquagliato/codenation/react-13/node_modules/jest-jasmine2/build/queueRunner.js:73:41</failure>
     </testcase>
-    <testcase classname="Contacts APP Should render Filters component" name="Contacts APP Should render Filters component" time="0.006">
+    <testcase classname="Contacts APP Should render Filters component" name="Contacts APP Should render Filters component" time="0.005">
       <failure>Error: Unable to find an element by: [data-testid=&quot;filters&quot;]
 
 &lt;body&gt;
@@ -62,7 +62,7 @@
     at mapper (/home/arnaldoquagliato/codenation/react-13/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
     at /home/arnaldoquagliato/codenation/react-13/node_modules/jest-jasmine2/build/queueRunner.js:73:41</failure>
     </testcase>
-    <testcase classname="Contacts APP Should render Topbar component" name="Contacts APP Should render Topbar component" time="0.008">
+    <testcase classname="Contacts APP Should render Topbar component" name="Contacts APP Should render Topbar component" time="0.004">
       <failure>Error: Unable to find an element by: [data-testid=&quot;topbar&quot;]
 
 &lt;body&gt;
